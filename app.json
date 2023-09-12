@@ -1,0 +1,42 @@
+{
+    "name": "mlflow-server",
+    "description": "MLflow Tracking Server with basic authentication (user/password).",
+    "logo": "https://avatars.githubusercontent.com/u/39938107?v=4",
+    "keywords": [
+        "machine learning",
+        "data science",
+        "machinelearning",
+        "mlflow",
+        "experiment tracking"
+    ],
+    "repository": "https://github.com/DougTrajano/mlflow-server",
+    "stack": "container",
+    "success_url": "/",
+    "env": {
+        "MLFLOW_TRACKING_USERNAME": {
+            "description": "Username for MLflow UI and API.",
+            "value": "mlflow"
+        },
+        "MLFLOW_TRACKING_PASSWORD": {
+            "description": "Password for MLflow UI and API.",
+            "value": "mlflow"
+        },
+        "MLFLOW_ARTIFACT_URI": {
+            "description": "URI for mlflow artifacts",
+            "value": "./mlruns"
+        },
+        "AWS_ACCESS_KEY_ID": {
+            "description": "AWS access key ID",
+            "required": false
+        },
+        "AWS_SECRET_ACCESS_KEY": {
+            "description": "AWS secret access key",
+            "required": false
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ]
+}
